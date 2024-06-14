@@ -1,0 +1,16 @@
+/root/xjy/OrinDeteciton_tracker/build/CMakeFiles/MOT.dir
+/root/xjy/OrinDeteciton_tracker/build/CMakeFiles/KCF.dir
+/root/xjy/OrinDeteciton_tracker/build/CMakeFiles/edit_cache.dir
+/root/xjy/OrinDeteciton_tracker/build/CMakeFiles/rebuild_cache.dir
+/root/xjy/OrinDeteciton_tracker/build/CMakeFiles/list_install_components.dir
+/root/xjy/OrinDeteciton_tracker/build/CMakeFiles/install.dir
+/root/xjy/OrinDeteciton_tracker/build/CMakeFiles/install/local.dir
+/root/xjy/OrinDeteciton_tracker/build/CMakeFiles/install/strip.dir
+/root/xjy/OrinDeteciton_tracker/build/src/app/CMakeFiles/orindectection_tracker.dir
+/root/xjy/OrinDeteciton_tracker/build/src/app/CMakeFiles/rev_win.dir
+/root/xjy/OrinDeteciton_tracker/build/src/app/CMakeFiles/edit_cache.dir
+/root/xjy/OrinDeteciton_tracker/build/src/app/CMakeFiles/rebuild_cache.dir
+/root/xjy/OrinDeteciton_tracker/build/src/app/CMakeFiles/list_install_components.dir
+/root/xjy/OrinDeteciton_tracker/build/src/app/CMakeFiles/install.dir
+/root/xjy/OrinDeteciton_tracker/build/src/app/CMakeFiles/install/local.dir
+/root/xjy/OrinDeteciton_tracker/build/src/app/CMakeFiles/install/strip.dir

@@ -1,0 +1,8 @@
+/root/xjy/OrinDeteciton_tracker/install/.//model/.gitkeep
+/root/xjy/OrinDeteciton_tracker/install/.//model/yolov5s_data1_green_255_simplify.engine
+/root/xjy/OrinDeteciton_tracker/install/./orindectection_tracker
+/root/xjy/OrinDeteciton_tracker/install/./rev_win
+/root/xjy/OrinDeteciton_tracker/install/./lib/libMOT.so
+/root/xjy/OrinDeteciton_tracker/install/./lib/libKCF.so
+/root/xjy/OrinDeteciton_tracker/install/.//lib/libimg_codec.so
+/root/xjy/OrinDeteciton_tracker/install/.//lib/libvps_pcap.so
