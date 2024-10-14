@@ -480,11 +480,12 @@ void run_MOT(cv::Mat &img,
     // 类别映射
     std::vector<float> mapping = {2.0f, 1.0f, 0.0f, 0.0f, 1.0f};
     for (size_t i = 0; i < pred_tracked.size(); i++) {
-        uint8_t index = static_cast<uint8_t>(pred_tracked[i][5]);
+        uint8_t index = static_cast<uint8_t>(pred_tracked[i][5]);     
         if (index < mapping.size()) {
             pred_tracked[i][5] = mapping[index];
         }
     }
+
 
     send_img(&img, 0, 1, pred_tracked, frame_id, th_id);
 
@@ -796,8 +797,15 @@ void img_process(int win_id, string engineFilename, std::vector<threadsafe_queue
 
     cv::Mat result;
     int frame_id = 0;
-    // 定义MOT类
-    int nc = 5;
+
+    
+
+    // Detection
+    nvinfer1::ICudaEngine *mEngine = InitEngine(engineFilename);
+    nvinfer1::IExecutionContext *context = mEngine->createExecutionContext();
+
+    auto binding = mEngine->getBindingDimensions(0);
+    int nc = int(binding.d[2]-5);
     std::vector<byte_track::BYTETracker> trackerm;
     for (int r = 0; r < nc; r++)
     {
@@ -805,10 +813,7 @@ void img_process(int win_id, string engineFilename, std::vector<threadsafe_queue
         byte_track::BYTETracker trackerb(distance_mode);
         trackerm.push_back(trackerb);
     }
-
-    // Detection
-    nvinfer1::ICudaEngine *mEngine = InitEngine(engineFilename);
-    nvinfer1::IExecutionContext *context = mEngine->createExecutionContext();
+    
 
     auto input_dims = nvinfer1::Dims{4, {1, 1, 512, 512}};
     context->setInputShape("images", input_dims);
@@ -1295,4 +1300,3 @@ int main(int argc, char *argv[])
     MLOG_INFO("退出");
     return 0;
 }
-
